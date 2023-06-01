@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mtv Hesaplama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="aracTipleri()">
+    <h1>MTV Hesaplama</h1><hr>
+    <table>
+        <tr>
+            <td>Araç Tipi</td>
+            <td>Motor Silindir Hacmi</td>
+            <td>Araç Yaşı</td>
+        </tr>
+        <tr>
+            <td><select id="aracTip" onchange="hacimTipleri()"><option value="-1" selected hidden>Araç Seçiniz</option></select></td>
+            <td><select id="motorHacim" onchange="yasTipleri()"><option value="-1" selected hidden> Hacim Seçiniz</option></select></td>
+            <td><select id="aracYas"><option value="-1" selected hidden>Yaş Seçiniz</option></select></td>
+        </tr>
+        <tr>
+            <td colspan="3"><br><button id="vergiHesap" onclick="hesapla()">Vergiyi Hesapla</button></td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <textarea id="tutar" cols="30" rows="10" disabled>2022 Yılı İçin Ödenmesi Gereken MTV Tutarı</textarea>
+    <br><br>
+    <button onclick="window.location.reload()">Temizle</button>
+    <button onclick="window.print()">MTV Yazdır</button>
+    <button onclick="window.close()">Ekranı Kapat</button>
+    <script src="script.js"></script>
+</body>
+</html>
